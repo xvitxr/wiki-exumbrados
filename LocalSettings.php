@@ -16,7 +16,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 }
 
 # Logo path
-# $wgLogo = "exumbrados-logo.png"
+
 
 $wgEnableUploads = true; # Enable uploads
 
@@ -46,7 +46,7 @@ $wgMetaNamespace = "Exumbrados";
 $wgScriptPath = "";
 
 ## The protocol and server name to use in fully-qualified URLs
-$wgServer = "http://exumbrados.dedyn.io";
+$wgServer = "http://exumbrados.dedyn.io:25565";
 
 ## The URL path to static resources (images, scripts, etc.)
 $wgResourceBasePath = $wgScriptPath;
@@ -54,8 +54,8 @@ $wgResourceBasePath = $wgScriptPath;
 ## The URL paths to the logo.  Make sure you change this from the default,
 ## or else you'll overwrite your logo when you upgrade!
 $wgLogos = [
-	'1x' => "$wgResourceBasePath/resources/assets/exumbrados-logo.svg",
-	'icon' => "$wgResourceBasePath/resources/assets/exumbrados-icon.svg",
+	'1x' => "https://cdn.discordapp.com/attachments/837121257920528398/1147813598295507015/freddy-fudidao.png",
+	'icon' => "https://cdn.discordapp.com/attachments/837121257920528398/1149124260569284660/exumbrados-icon.png",
 ];
 
 ## UPO means: this is also a user preference option
@@ -149,5 +149,10 @@ wfLoadSkin( 'Vector' );
 # End of automatically generated settings.
 # Add more configuration options below.
 
+# $wgFavicon = "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+$wgLogo = "https://cdn.discordapp.com/attachments/837121257920528398/1147813598295507015/freddy-fudidao.png";
+
+wfLoadExtension( 'DarkMode' );
+wfLoadExtension( 'FlexDiagrams' );
 wfLoadExtension( 'YouTube' );
 wfLoadExtension( 'VisualEditor' );
